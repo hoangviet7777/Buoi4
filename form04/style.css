@@ -1,0 +1,44 @@
+html{
+    font-family: Tahoma;
+    font-size: 11pt;
+  
+    }
+    th{
+        font-size: 13pt;
+        color: azure;
+        background: #0373bd;
+        padding:6px;
+       
+    }
+    td{
+        padding: 6px;
+        background: #94c7e9;
+    }
+
+    select{
+        padding: 6px;
+        background: #06e7dc;
+    }
+    textarea{
+         padding: 6px;
+         background: #06e7dc;
+    }
+    table{
+       
+        background-position: auto;
+        border-collapse: collapse;
+       
+    }
+    input{
+      
+        
+        border: 2px dotted #18b9c4;
+        background: #06e7dc;
+    }
+    button{
+       
+        border: 2px solid #e9e2e2;
+        background: #0a4fb6;
+        color: azure;
+       
+    }

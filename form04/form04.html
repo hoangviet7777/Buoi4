@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FORM 04</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="check.js"></script>
+</head>
+
+<body>
+	<form	name="H" action="https://fit.agu.edu.vn/demo.php" method="get">
+		<table border="1" width="400">
+			<tr>
+				<th  colspan ="2" align ="center">
+					THông Tin Đăng Ký
+				</th>
+				
+			</tr>
+			<tr>
+				<td>Họ và Tên</td>
+				<td><input type="text" name="HVT"</td>
+			</tr>
+			<tr>
+				<td>Ngày Sinh</td>
+				<td>
+					<select name="Ngay">
+						<option value="">Ngày</option>
+						<script>
+							var d = new Date();
+							var namht = d.getFullYear();
+							for(var i=1;i<31;i++)
+							{
+								document.write('<option>' + i + '</option>');
+							}
+							
+						</script>
+					</select>
+					
+					<select name="Thang">
+						<script>
+							var d =new Date();
+							var Thang = d.getMonth();
+							for(var i=1;i<12;i++)
+							{
+								document.write('<option>' + i + '</option>');
+							}
+						</script>
+						<option value="">Tháng</option>
+					</select>
+
+					</script>
+					<select name="Nam">
+						<script>
+							var d = new Date;
+							var namht = d.getFullYear();
+							for(var i=1970;i<namht;i++)
+							{
+								document.write('<option>' + i + '</option>')
+							}
+						</script>
+						<option value="">Năm</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Giới Tính</td>
+				<td>
+					<input checked type="radio" name="GioiTinh" value="Nam">Nam
+					<input type="radio" name="GioiTinh" value="Nữ">Nữ
+					<input type="radio" name="GioiTinh" value="Chưa rõ">Chưa rõ
+				</td>
+			</tr>
+			<tr>
+				<td>Nghề Nghiệp</td>
+				<td>
+					<select name="NgheNghiep">
+						<option value="">--Chọn--</option>
+						<option>Luật sư</option>
+						<option>Kỹ sư</option>
+						<option>Bác sĩ</option>
+						<option>Giáo viên</option>
+						<option selected >Sinh viên</option>
+						<option>Nghề khác</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td >Ghi Chú</td>
+				<td><textarea name="GhiChu"></textarea></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td>
+					<button onclick="return check()">Đăng ký</button>
+					<button type="reset">Xóa làm lại</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>
